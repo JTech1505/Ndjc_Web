@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDJC Campus</title>
+    <link rel="stylesheet" href="indexstyles.css">
+    <script src="script.js" defer></script>
+    <style>
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+            text-align: center;
+        }
+        
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }
+        
+        .popup img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .popup button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #004488;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="popup" id="popup">
+        <img src="img/announcement.jpg" alt="Important Announcement">
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            document.getElementById("popup-overlay").style.display = "block";
+            document.getElementById("popup").style.display = "block";
+        };
+
+        function closePopup() {
+            document.getElementById("popup-overlay").style.display = "none";
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+    <header class="nav">
+        <nav>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+            <ul class="menu" id="menu">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="academics.html" class="dropbtn">Academics ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Undergraduate Programs</a></li>
+                        <li><a href="#">Graduate Programs</a></li>
+                        <li><a href="#">Senior High School</a></li>
+                        <li><a href="#">ETEEAP</a></li>
+                    </ul>
+                </li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="extension.html">Extensions</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">About Us ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Vision & Mission</a></li>
+                        <li><a href="#">Core Values</a></li>
+                        <li><a href="#">College Seal</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="banner">
+            <h1>Welcome to NDJC</h1>
+            <p>Leading change through W.I.S.E</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Our School</h2>
+        <p>NDJC is dedicated to academic excellence and holistic development...</p>
+    </section>
+
+    <section id="campus-life">
+        <h2>Campus Life</h2>
+        <p>Experience a vibrant student life with modern facilities...</p>
+    </section>
+
+    <section id="news">
+        <h2>News & Events</h2>
+        <div class="news-container">
+            <div class="news-card">
+                <img src="img/ceremony.jpg" alt="Graduation Ceremony">
+                <div class="news-content">
+                    <h3>Graduation Ceremony 2025</h3>
+                    <p><strong>Date:</strong> June 15, 2025</p>
+                    <p>Join us in celebrating the achievements of our graduates in a grand ceremony at the NDJC Auditorium.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="img/acad.webp" alt="Academic Excellence Award">
+                <div class="news-content">
+                    <h3>Academic Excellence Award</h3>
+                    <p><strong>Date:</strong> March 10, 2025</p>
+                    <p>Recognizing outstanding students for their exceptional academic performance and dedication.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="img/sports.jpg" alt="Sports Festival">
+                <div class="news-content">
+                    <h3>Annual Sports Festival</h3>
+                    <p><strong>Date:</strong> September 5-7, 2025</p>
+                    <p>A thrilling three-day event promoting sportsmanship, teamwork, and school spirit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@ndjc.edu.ph | Phone: (123) 456-7890</p>
+    </section>
+</body>
+
+</html>
